@@ -44,17 +44,17 @@
 //let rezultat = (godini>=18)? "Imate pravo da polagate" : "Nemate pravo da polagate"
 //console.log(`Odgovorot e ${rezultat}`) // nacin na pecatenje na vrednost na promenliva
 
-let proizvod = prompt("Vnesi proizvod")
+//let proizvod = prompt("Vnesi proizvod")
 
-if (proizvod=="chokolado"){
-    console.log("kupiv chokolado")
-}else if(proizvod=="mastika"){
-    console.log("kupiv mastika")
-}else if(proizvod=="chips"){
-    console.log("kupiv chips")
-}else{
-    console.log("ne kupiv nishto")
-}
+//if (proizvod=="chokolado"){
+//    console.log("kupiv chokolado")
+//}else if(proizvod=="mastika"){
+//    console.log("kupiv mastika")
+//}else if(proizvod=="chips"){
+//    console.log("kupiv chips")
+//}else{
+//    console.log("ne kupiv nishto")
+//}
 
 //PRAVILO! if mozhe da stoi samostojno dodeka else if i else ne mozhe da se definiraat bez if 
 //isto taka ne mora sekogash da se definira sprotiven (else) nastan
