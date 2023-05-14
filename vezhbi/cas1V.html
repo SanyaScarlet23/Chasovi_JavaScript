@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cas1Vezhbi_Varible_and_Operators</title>
+    <script type="text/javascript" src="cas1V.js"></script>
+</head>
+<body>
+    <!--
+        4 Ways to Declare a JavaScript Variable:
+Using var
+Using let
+Using const
+Using nothing
+What are Variables?
+Variables are containers for storing data (storing data values).
+When to Use JavaScript var?
+Always declare JavaScript variables with var,let, orconst.
+
+The var keyword is used in all JavaScript code from 1995 to 2015.
+
+The let and const keywords were added to JavaScript in 2015.
+
+If you want your code to run in older browsers, you must use var.
+When to Use JavaScript const?
+If you want a general rule: always declare variables with const.
+
+If you think the value of the variable can change, use let.
+JavaScript Identifiers
+All JavaScript variables must be identified with unique names.
+
+These unique names are called identifiers.
+
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+The general rules for constructing names for variables (unique identifiers) are:
+
+Names can contain letters, digits, underscores, and dollar signs.
+Names must begin with a letter.
+Names can also begin with $ and _ (but we will not use it in this tutorial).
+Names are case sensitive (y and Y are different variables).
+Reserved words (like JavaScript keywords) cannot be used as names.
+
+The Assignment Operator
+In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.
+JavaScript Data Types
+JavaScript variables can hold numbers like 100 and text values like "John Doe".
+
+In programming, text values are called text strings.
+
+JavaScript can handle many types of data, but for now, just think of numbers and strings.
+
+Strings are written inside double or single quotes. Numbers are written without quotes.
+
+If you put a number in quotes, it will be treated as a text string.
+Declaring a JavaScript Variable
+Creating a variable in JavaScript is called "declaring" a variable.
+
+You declare a JavaScript variable with the var or the let keyword.
+After the declaration, the variable has no value (technically it is undefined).
+
+To assign a value to the variable, use the equal sign.
+Note
+It's a good programming practice to declare all variables at the beginning of a script.
+One Statement, Many Variables
+You can declare many variables in one statement.
+
+Start the statement with let and separate the variables by comma:
+
+Example
+let person = "John Doe", carName = "Volvo", price = 200;
+Value = undefined
+In computer programs, variables are often declared without a value. The value can be something that has to be calculated, or something that will be provided later, like user input.
+
+A variable declared without a value will have the value undefined.
+
+The variable carName will have the value undefined after the execution of this statement:
+
+Example
+let carName;
+Re-Declaring JavaScript Variables
+If you re-declare a JavaScript variable declared with var, it will not lose its value.
+
+The variable carName will still have the value "Volvo" after the execution of these statements:
+
+Example
+var carName = "Volvo";
+var carName;
+Note
+If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
+JavaScript Dollar Sign $
+Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names:
+
+Example
+let $ = "Hello World";
+let $$$ = 2;
+let $myMoney = 5;
+JavaScript Underscore (_)
+Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names:
+
+Example
+let _lastName = "Johnson";
+let _x = 2;
+let _100 = 5;
+Using the underscore is not very common in JavaScript, but a convention among professional programmers is to use it as an alias for "private (hidden)" variables.
+Variables defined with let can not be redeclared.
+
+Variables defined with let must be declared before use.
+
+Variables defined with let have block scope.
+Block Scope
+Before ES6 (2015), JavaScript had Global Scope and Function Scope.
+
+ES6 introduced two important new JavaScript keywords: let and const.
+
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared inside a { } block cannot be accessed from outside the block.
+Variables declared with the var keyword can NOT have block scope.
+
+Variables declared inside a { } block can be accessed from outside the block.
+Redeclaring Variables
+Redeclaring a variable using the var keyword can impose problems.
+
+Redeclaring a variable inside a block will also redeclare the variable outside the block.
+Redeclaring a variable using the let keyword can solve this problem.
+
+Redeclaring a variable inside a block will not redeclare the variable outside the block.
+Redeclaring
+Redeclaring a JavaScript variable with var is allowed anywhere in a program.
+With let, redeclaring a variable in the same block is NOT allowed.
+The const keyword was introduced in ES6 (2015).
+
+Variables defined with const cannot be Redeclared.
+
+Variables defined with const cannot be Reassigned.
+
+Variables defined with const have Block Scope.
+Cannot be Reassigned
+A const variable cannot be reassigned.
+Must be Assigned
+JavaScript const variables must be assigned a value when they are declared.
+When to use JavaScript const?
+Always declare a variable with const when you know that the value should not be changed.
+
+Use const when you declare:
+A new Array
+A new Object
+A new Function
+A new RegExp
+
+Constant Objects and Arrays
+The keyword const is a little misleading.
+
+It does not define a constant value. It defines a constant reference to a value.
+
+Because of this you can NOT:
+
+Reassign a constant value
+Reassign a constant array
+Reassign a constant object
+But you CAN:
+
+Change the elements of constant array
+Change the properties of constant object
+
+                       JavaScript Operators
+The Addition Operator + adds numbers.
+The Assignment Operator = assigns a value to a variable.
+
+Types of JavaScript Operators
+There are different types of JavaScript operators:
+
+1.Arithmetic Operators
+2.Assignment Operators
+3.Comparison Operators
+4.String Operators
+5.Logical Operators
+6.Bitwise Operators
+7.Ternary Operators
+8.Type Operators
+
+1.JavaScript Arithmetic Operators
+
+Operator	Description
++	Addition
+-	Subtraction
+*	Multiplication
+**	Exponentiation (ES2016)
+/	Division
+%	Modulus (Division Remainder)
+++	Increment
+--	Decrement
+
+2.JavaScript Assignment Operators
+Assignment operators assign values to JavaScript variables.
+
+The Addition Assignment Operator (+=) adds a value to a variable.
+
+Operator	Example	                       Same As
+=	         x = y	                      x = y
++=	         x += y	                      x = x + y
+-=	         x -= y	                      x = x - y
+*=	         x *= y	                      x = x * y
+/=	         x /= y	                      x = x / y
+%=	         x %= y	                      x = x % y
+**=	         x **= y	                  x = x ** y
+
+3.JavaScript Comparison Operators
+
+Operator	       Description
+==	               equal to
+===	               equal value and equal type
+!=	               not equal
+!==	               not equal value or not equal type
+>	               greater than
+<	               less than
+>=	               greater than or equal to
+<=	               less than or equal to
+?	               ternary operator
+
+5.JavaScript Logical Operators
+
+Operator	          Description
+&&	                  logical and
+||	                  logical or
+!	                  logical not
+
+6.JavaScript Bitwise Operators
+Bit operators work on 32 bits numbers.
+Any numeric operand in the operation is converted into a 32 bit number. 
+The result is converted back to a JavaScript number.
+
+Operator	Description	          Example
+&	          AND	              5 & 1
+|	           OR	              5 | 1
+~	          NOT	              ~ 5
+^	          XOR	              5 ^ 1
+<<	        left shift	          5 << 1
+>>	        right shift	          5 >> 1
+>>>	    unsigned right shift	  5 >>> 1
+
+7.Ternary Operators
+
+8.JavaScript Type Operators
+? is a ternary operator
+
+Operator	     Description
+typeof	         Returns the type of a variable
+instanceof	     Returns true if an object is an instance of an object type
+
+    -->
+    
+</body>
+</html>

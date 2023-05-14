@@ -26,11 +26,7 @@ let bookStoreInventory = {
         language6: "Japanese",
         language7: "French"
     },
-    publisher:{
-        publisher1: "Makedonska Kniga",
-        publisher2: "Ace",
-        publisher3: "Penguin"
-    },
+    publisher:["Makedonska Kniga","Ace", "Penguin"],
     yearPublication: {
         year1: 1988,
         year2: 1989,
