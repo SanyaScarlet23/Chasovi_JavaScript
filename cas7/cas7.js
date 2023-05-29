@@ -108,3 +108,55 @@ let timeout = setTimeout(()=>{
 */
 
 //DOPOLNITELNI FUNKCII ZA NIZI KOI PRIMAAT FUNKCII KAKO PARAMETAR: forEach, map, filter,reduce(dava eden cel broj)
+
+//foreach/map/filter/reduce
+
+let niza=[1,5,3,5,7,5,3,1]
+
+/*
+//povikuva funkcija za sekoj element od nizata vo koja se izvrshuvaat nekoi naredbi povrzani so toj element
+ niza.forEach((element,index)=>{ // mozhe i bez index pak kje raboti najnormalno samo shto nema da go pechati indexot na elementot 
+    console.log(element,index)
+ })
+
+ //index parametarot e opcionalen, go dodavame po potreba
+ niza.forEach((element)=>{ // mozhe i bez index pak kje raboti najnormalno samo shto nema da go pechati indexot na elementot 
+    console.log(element)
+ })
+*/
+
+/*
+niza.forEach((element,index)=>{ // podobro da se koristi (for element of niza) ako nema pobaruvanje za indexot 
+    if(index%2==0){
+        console.log(index+":"+element)
+    }
+})
+*/
+
+/*
+//primer1
+let niza2=niza.map(element=>element*2)
+console.log(niza2)
+
+//map se koristi koga sakame da kreirame nova niza so ist broj na elementi kako prvata (niza) no modificirana
+// sekoj pat map vrakja niza
+//prmer2
+let niza3=niza.map((element,i)=>element*2+i)
+console.log(niza3)
+
+*/
+
+let niza4=niza.filter(x=>x%2==0) // ako e true vnatreshnata funkcija togash kje go smestuva elementot t.e x vo nova niza t.e niza4
+console.log(niza4)
+
+let kandidati =[{name:"a",height:190},{name:"b",height:160}]
+
+let k=kandidati.filter(element=>element.height>170)
+console.log(k)
+
+let names=kandidati.filter(element=>element.height>170).map(e=>e.name)
+console.log(names)
+//mozheme da gi kombinirame filter, map i reduce po potreba primer: filter(funkcija).map(funkcija)
+
+let reducedArray = niza.reduce((acc, curr)=>acc+curr)
+console.log(reducedArray)
