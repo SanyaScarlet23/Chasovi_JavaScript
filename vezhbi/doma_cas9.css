@@ -1,0 +1,50 @@
+.display {
+    background-color: grey;
+    width: 600px;
+    height: 300px;
+    color: rgb(0, 0, 0);
+    background-image: url(https://cdn.dribbble.com/users/74147/screenshots/3710069/weather_icons.png?compress=1&resize=400x300&vertical=top);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.input {
+    background-color: rgba(128, 128, 128, 0.411);
+    width: 600px;
+    height: 70px;
+    text-align: center;
+    border: none;
+}
+
+.button,
+input {
+    background-color: rgba(48, 9, 207, 0.589);
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    padding: 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px
+}
+
+.button:active {
+    background-color: rgb(19, 4, 78);
+}
+
+body {
+    background-color: rgb(101, 78, 47);
+}
+
+.name,
+.temp {
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
