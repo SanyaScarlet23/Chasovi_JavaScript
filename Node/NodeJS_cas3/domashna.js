@@ -26,7 +26,7 @@ const c2f=(cel)=> cel*1.8+32
 
 //? Da ima funkcija sto presmetuva plostina i perimetar na triagolnik
 const zaRamnostranTriagolnik = (a) =>{ //Ploshtinana ramnostran triagolnik: P=1/2*a*h, h=sq(a2-(a/2)2) sleduva P=sq3*a/4
-    return console.log(`Ploshtinata na triagolnikot e ${3*a/4}, dodeka perimetarot iznesuva ${3*a}`) 
+    return console.log(`Ploshtinata na triagolnikot e ${1.73205*a/4}, dodeka perimetarot iznesuva ${3*a}`) 
 };
 
 
