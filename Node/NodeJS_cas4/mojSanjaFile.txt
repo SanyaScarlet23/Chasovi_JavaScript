@@ -1,0 +1,1 @@
+Asyhrono probuvam da kreiram .txt fajl to ga pravam so fs.writeFile dodeka sinhronoto e so fs.writeFileSync 

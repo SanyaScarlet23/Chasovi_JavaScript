@@ -66,6 +66,43 @@ console.log(arrayponov);
 //console.log(arrayponov);
 //console.log(arrayNov);
 
+//! Kopiranje na array
+//spread operator
+const arry1=[2,3,4,5,6];
+const arry2=[24,313,45,50,60];
+const array3=array1.concat(array2);
+const array4=[...array1, ...array2];
+console.log(array4);
+
+//!Destruction on Arrays
+const arr1=[1,3,7];
+const [a, b, element3]=arr1;
+console.log(element3);
+
+const arr2=[50,100,5,6,7,8,9]
+const [x,z,...y]=arr2;
+console.log(x);
+console.log(y);
+console.log(z);
+
+//!Destruction on Objects
+const myObject ={produkt: "Smoki", cena:13}
+const {cena,produkt}= myObject;
+console.log(cena,produkt);
+
+//!Kopiranje na Objekt mozhe so spread operator no ima i drug nachin :)))
+const obj1 ={
+    item1: "eden",
+    item2: "dva",
+};
+
+const obj2 ={
+    item3: "tri",
+    produkt: "osum",
+};
+
+const pbj3 ={...obj1, ...obj2, item3: "Chetiri"}
+
 
 //! Implementacija na gotovi hight-order functions vo javascript
 //* MAP, FOREACH, REDUCE, FILTER, SORT, FIND

@@ -15,16 +15,34 @@ const studenti=[
 
 //? Domasna
 //? 1. Site studenti od Skopje chie ime zavrshuva na a i imaat prosek nad 7, podredeni po ime(rastecki)
+/*
 let skopjeStudenti = studenti
        .filter((studentObj) =>studentObj.grad == "Skopje")
        .filter((studentObj) => studentObj.prosek > 7)
-       .sort((a,b) => a.ime + b.ime)
-      // .endsWith((studentObj) => {
-      //   let imeNaUchenik = studentObj.ime;
-      //   let zavrshuvaNaA =imeNaUchenik.endsWith("a");
-      // return studentObj;
-     // });
+       .sort((a,b) => a.ime + b.ime);
 console.log(skopjeStudenti);
+console.log(studentObj.ime);
+
+
+
+for(let i=0; i<skopjeStudenti.length; i++){
+    let textIme = studentObj[i].ime;
+    if(textIme == studentObj[i].ime.endsWith("a")){
+        console.log(skopjeStudenti);
+    }
+}
+
+
+if(skopjeStudenti.ime==skopjeStudenti.ime.endsWith("a")){
+       console.log(skopjeStudenti);
+}
+      
+*/
+//Podobra varijanta
+
+const skopjeStudenti = studenti
+.filter((studentObj) => studentObj.grad == "Skopje" && studentObj.ime.endsWith("a") && studentObj.prosek>7)
+.sort((a,b)=> a.ime-b.ime);
 
 
 //? 2. Site studenti koi imaat prosek nad 9 i ne se od Skopje, podredeni po prosek opagjacki

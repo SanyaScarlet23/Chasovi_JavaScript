@@ -1,0 +1,1 @@
+Jas sum fajlot file1Kreiran.txt koj prvin kje treba da se sozdadam so fs.writeFile a podocna da si go smenam imeto vo smenivIme.txt
