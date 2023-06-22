@@ -18,12 +18,3 @@ exports.fileWrite = (filename, data) =>{ //za zapishuvanje na fajl vo JSON.strin
     });
 };
 
-/*
-exports.removeIndex = (index,array)=>{
-    if(index == array[array.length -1]){
-        array.splice(index,array[array.length -1]);
-        return true;
-    }
-    return false;
-}
-*/
