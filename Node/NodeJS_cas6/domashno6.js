@@ -9,7 +9,8 @@
 
 const http =require("http");
 
-//?Tuka kje sakame da ja vgnezdime funkcijata koja kje ni go deli stringot i kje ni presmetuva parni ne parni bukvi
+//?Tuka kje sakame da ja vgnezdime funkcijata koja kje ni go deli stringot i kje ni presmetuva paren ili ne paren broj na bukvi
+
 const zadacha=(request, response)=>{
 
     const ime=request.url;
@@ -27,6 +28,36 @@ const zadacha=(request, response)=>{
     }else{
         response.end(`Nizata so ime ${ime} e so ne paren broj na bukvi`)
         //console.log(`Nizata so ime ${ime} e so ne paren broj na bukvi`)
+    };
+    
+
+    for(let element=0; element < nizaIme.length; element++){
+      switch(element) {
+        case "a":
+        case "A":
+            response.end(`chlenot od nizata e samoglaska, ima karakter 2`);
+        break;
+        case "o":
+        case "O":
+            response.end(`chlenot od nizata e samoglaska, ima karakter 2`);
+        break;
+        case "e":
+        case "E":
+            response.end(`chlenot od nizata e samoglaska, ima karakter 2`);
+        break;
+        case "u":
+        case "U":
+            response.end(`chlenot od nizata e samoglaska, ima karakter 2`);
+        break;
+        case "i":
+        case "I":  
+           response.end(`chlenot od nizata e samoglaska, ima karakter 2`);
+        break;
+        default:
+            response.end(`chlenot od nizata e soglaska, ima karakter 5`)
+      };
+
+
     };
 
 };
