@@ -22,20 +22,36 @@ const domashnoModul =require("./domashnoModul.js"); //kako go povikuvame modulot
 })();
 */
 
+//Moj nachin kako ja reshiv zadachata, tochna no dolnoto reshenie e podobro!
+/*
 (async()=>{
     try{
-        const celaSodrzhina = await domashnoModul.fileRead("studenti1.json"); //1.Vchitana celata sodrzhina od fajlot fs|fs.readFile od modulot domashnoModul.js
-        let studenti1 =JSON.parse(celaSodrzhina); //2.konvertiran studenti1.json vo niza so JSON.parse
-        //console.log(studenti1);
+        const celaSodrzhina = await domashnoModul.fileRead("studenti1.json");
+        let studenti1 = JSON.parse(celaSodrzhina);
 
-        //3.dodavanje na podatok na student vo nizata so push() method, odnosno na krajot od studenti1
-        studenti1.push({"ime":"Lidija", "prezime":"Lidevska", "prosek":8.9, "grad":"Struga"});
+        studenti1.push({ime:"Lidija", prezime:"Lidova", prosek:8.8, grad:"Strumica"});
         console.log(studenti1);
-        //4.Nizata od js niza objekt da se konvertira vo tekst i_JSON.stringify tekstot da bide zachuvan kako student1.txt kje ja
-        //koristime funkcijata fileWrite od modulot domashnoModul.js
-        await domashnoModul.fileWrite("studenti1.txt", JSON.stringify(studenti1)); //so ova e kreiran fajl: studenti1.txt 
+        await domashnoModul.fileWrite("studenti1.txt", JSON.stringify(studenti1));
+
+    }catch(err){
+        console.log(err)
+    }
+
+})();
+*/
+
+//Reshenie podobro kade shto so patametarot student koj go stavame vo async-function si dodavame kolku i kakvi sakame chlenovi vo nizata!!!
+
+const addstudent = async(student)=>{
+    try{
+        const celaSodrzhina = await domashnoModul.fileRead("studenti1.json"); 
+        let studenti1 =JSON.parse(celaSodrzhina);
+        studenti1.push(student);
+        console.log(studenti1);
         
+        await domashnoModul.fileWrite("studenti1.txt", JSON.stringify(studenti1)); 
     }catch(err){
         console.log(err);
     }
-})();
+ }
+ addstudent({ime:"Lidija", prezime:"Lidevska", prosek:8.9, grad:"Struga"})
