@@ -2,10 +2,8 @@ const express=require("express");
 let ejs = require("ejs");
 
 const app = express();
-app.use(express.urlencoded({extended: true})); //zadolzhitelno
-app.set("view engine", "ejs"); // deka kje koristime ejs
-
-
+app.use(express.urlencoded({extended: true})); //zadolzhitelno_Object-to go pravi
+app.set("view engine", "ejs"); // Ovaa e zadolzhitelno koga kje koristime odnosno deka kje koristime ejs
 
 let data={
     ime:"Pero",
@@ -20,8 +18,8 @@ let data={
 };
 
 let domasna = {
-    ime: "vashe ime",
-    prezime: "vashe prezime",
+    ime: "Sanja",
+    prezime: "Kostovska",
     ovoshje: ["Jabolko, Praska, Kajsija, Krusha"],
     zelenchuk: ["Krastavica", "Zelka", "Brokula", "Domat"],
     vitmini: [
@@ -31,14 +29,17 @@ let domasna = {
       { ime: "Brokula", vitamin: "D", mineral: "Zelezo" },
       { ime: "Domat", vitamin: "G", mineral: "Srebro" },
     ],
-  };
+};
 
+// definirame get() method respond-ot ni e tuka so render!!!
 app.get("/",(req,res)=>{
-    res.render("index",data);
+    res.render("index", data);
 });
 
 //!Morame posle "index" da gi zadademe ako sakame da funkcionira malku e poteshka sintaksata
 
+// definirame na app-ot post() method i tuka informaciite odat vo body!!! 
+// Isto taka res.render odnosno respon-ot odi so render
 app.post("/", (req, res) => {
     console.log(req.body);
     const novStudent = {
@@ -49,13 +50,15 @@ app.post("/", (req, res) => {
     data.studenti.push(novStudent);
   
     res.render("index", data);
-  });
+});
   
+//? DA SE KREIRA LOGIKA KAKO KJE GO BRISHIME STUDENTOT
+/*
   app.post("/delete/:ime", (req, res) => {
     //? DA SE KREIRA LOGIKA KAKO KJE GO BRISHIME STUDENTOT
     res.redirect("/");
   });
-
+*/
 
 app.listen(9000, (err)=>{
     if(err) return console.log(err);
