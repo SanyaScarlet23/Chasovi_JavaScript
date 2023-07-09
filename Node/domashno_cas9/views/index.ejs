@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domashno_cas9</title>
+    <style>
+        body{
+            color: rgb(9, 84, 105);
+            font-size: 18px;
+            font-family: sans-serif;
+        };
+        h1,h2,table,form{
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Za definiranje na EJS i negova primena_sintaksata e krsh :)-->
+    <h1>Domashna za dodavanje na minerali i vitamini na nekoj zelenchuk ili ovoshka</h1>
+    <h2>Ime: <%=ime%><%=prezime%></h2>
+    <ul>
+        <% ovoshje.forEach(ovoshka =>{%>
+            <li><%=ovoshka%></li><%});
+        %>
+        <br>
+        <% zelenchuk.forEach(zaSalata=>{%>
+            <li><%=zaSalata%></li><%}); 
+        %>
+    </ul>
+
+    <!--Kreiranje na tabela za promenlivata domashna-->
+    <table border="3" width="100%">
+        <tr>
+            <th>Ime</th>
+            <th>Vitamin</th>
+            <th>Mineral</th>
+        </tr>
+
+        <%vitamini.forEach(vita=>
+          {%>
+            <tr>
+                <td><%=vita.ime%></td>
+                <td><%=vita.vitamin%></td>
+                <td><%=vita.mineral%></td>
+            </tr>
+          <%});
+         %>
+    </table>
+
+    <h2>Dodajte zelenchuk ili ovoshje po vasha zhelba</h2>
+    //Definiranje na form-ata za input (odnosno korisnikot da vnesuva podatoci)
+    <form action="/zelenchuk" method="post">
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" name="ime" required /> 
+        <label for="vitamin">Vitamin:</label>
+        <input type="text" id="vitamin" name="vitamin" required /> 
+        <label for="mineral">Mineral</label>
+        <input type="text" id="mineral" name="mineral" required /> <br />
+        <input type="submit" value="SUBMIT" id="button" />
+    </form>
+
+    
+</body>
+</html>
