@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const parseTempate = async(template, object=null) =>{
+const parseTemplate = async(template, object=null) =>{
  return new Promise((success, fail)=>{
     fs.readFile(`${__dirname}/../views/${template}`, "utf-8", (err, content)=>{
         if(err) return fail(err);
