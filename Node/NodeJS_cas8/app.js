@@ -1,6 +1,6 @@
 //! Arhitekturata na edna aplikacija igra kluchna uloga za organizacijata i strukturata na samata aplikacija
 
-//! 1. Organizirame i struktuirame nashiot kod
+//! 1. Organizirame i go struktuirame nashiot kod
 //! 2. Podelba na sektori
 //! 3. Podobruvanje na testiranjeto na nashata aplikacija
 //! 4. Odrzhlivost
@@ -23,7 +23,7 @@ app.use(
 );
 
 /*
-app.get("bmi/:weight/:height", (req, res)=>{ // on stavi .use no treba .get !!! vidi zoshto OK!!!
+app.get("bmi/:weight/:height", (req, res)=>{ 
     const weight = req.params.weight;
     const height = req.params.height;
     const bmi = weight / (height* height);

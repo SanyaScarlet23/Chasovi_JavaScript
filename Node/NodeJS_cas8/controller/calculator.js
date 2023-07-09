@@ -39,7 +39,7 @@ const calculateForce =(req,res)=>{
 
 const getCalculator = async(req,res)=>{
     try{
-        const output = await parseTemplate("calculator_form.html");
+        const output = await parseTemlate("calculator_form.html");
         res.send(output);
     }catch (err){
         console.log(err);
@@ -74,7 +74,7 @@ const postCalculator =async(req,res)=>{
 
         const response = await parseTemplate("calculator.html", {
             data: rezultat,
-            ime = `Operacija ${req.body.op}`,
+            ime= `Operacija ${req.body.op}`,
         });
 
         res.send(response);
@@ -89,5 +89,5 @@ module.exports ={
     bmiCalculator,
     calculateForce,
     getCalculator,
-    postCalculator,
+    postCalculator
 };
