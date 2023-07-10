@@ -10,7 +10,9 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 
 mongoose.connect(
-    "mongodb+srv://sanyakost:Kumanovo23@cluster0.gpeifzi.mongodb.net/?retryWrites=true&w=majority",
+    //!Tuka imav zaboraveno ime na data bazata Blogovi pomegju /?, odnosno treba da e /Blogovi?
+    //! Osven toa se drugo funkcionira super i na postman :)
+    "mongodb+srv://sanyakost:Kumanovo23@cluster0.gpeifzi.mongodb.net/Blogovi?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
