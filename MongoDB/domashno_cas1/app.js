@@ -25,6 +25,13 @@ mongoose.connect(
 
 app.get("/blogs", blogController.getAllBlogs);
 app.post("/blogs", blogController.createBlog);
+//! Prodolzhuvanje na domashnoto, kreiranje na method-i i pritoa se odnesuvaat vo mojot sluchaj po id a mozhe po shto sakame naslov,ocenka,opis,vreme,avtor
+app.get("/blogs/:id", blogController.getBlog);
+//! Za update odnosno izmeni vo konkreten objekt od kolekcijata izbran po sopstvenoto id
+app.patch("/blogs/:id", blogController.updateBlog);
+//!Brishenje po id
+app.delete("/blogs/:id", blogController.deleteBlog);
+
 
 app.listen(10023, (err)=>{
     if(err) return console.log(err);
